@@ -11,22 +11,23 @@ public class Menu extends javax.swing.JFrame {
     private void initComponents() {
 
         tituloVeterinaria = new javax.swing.JLabel();
-        nuevoCliente = new javax.swing.JToggleButton();
+        btnNuevoCliente = new javax.swing.JToggleButton();
         verClientes = new javax.swing.JButton();
         agendarCita = new javax.swing.JButton();
         reportePagos = new javax.swing.JButton();
         reporteCitas = new javax.swing.JButton();
+        reporteCliente = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(500, 500));
+        setPreferredSize(new java.awt.Dimension(500, 550));
         setResizable(false);
 
         tituloVeterinaria.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         tituloVeterinaria.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         tituloVeterinaria.setText("Veterinaria UES");
 
-        nuevoCliente.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        nuevoCliente.setText("Añadir cliente");
+        btnNuevoCliente.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnNuevoCliente.setText("Añadir cliente");
 
         verClientes.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         verClientes.setText("Ver Clientes");
@@ -40,6 +41,9 @@ public class Menu extends javax.swing.JFrame {
         reporteCitas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         reporteCitas.setText("Reporte de citas");
 
+        reporteCliente.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        reporteCliente.setText("Reporte de cliente");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -50,12 +54,13 @@ public class Menu extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(tituloVeterinaria, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nuevoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnNuevoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(agendarCita, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(verClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(15, 160, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(reporteCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(reporteCitas, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(reportePagos, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))))
@@ -66,7 +71,7 @@ public class Menu extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(tituloVeterinaria, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(nuevoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnNuevoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(verClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -75,10 +80,12 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(reportePagos, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(reporteCitas, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(reporteCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
-        nuevoCliente.getAccessibleContext().setAccessibleName("nuevoCliente");
+        btnNuevoCliente.getAccessibleContext().setAccessibleName("nuevoCliente");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -94,8 +101,9 @@ public class Menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton agendarCita;
-    private javax.swing.JToggleButton nuevoCliente;
+    private javax.swing.JToggleButton btnNuevoCliente;
     private javax.swing.JButton reporteCitas;
+    private javax.swing.JButton reporteCliente;
     private javax.swing.JButton reportePagos;
     private javax.swing.JLabel tituloVeterinaria;
     private javax.swing.JButton verClientes;
