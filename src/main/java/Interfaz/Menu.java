@@ -10,13 +10,26 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jFrame1 = new javax.swing.JFrame();
         tituloVeterinaria = new javax.swing.JLabel();
         btnNuevoCliente = new javax.swing.JToggleButton();
-        verClientes = new javax.swing.JButton();
-        agendarCita = new javax.swing.JButton();
-        reportePagos = new javax.swing.JButton();
-        reporteCitas = new javax.swing.JButton();
-        reporteCliente = new javax.swing.JButton();
+        btnVerClientes = new javax.swing.JButton();
+        btnAgendarCita = new javax.swing.JButton();
+        btnReportePagos = new javax.swing.JButton();
+        btnReporteCitas = new javax.swing.JButton();
+        btnReporteCliente = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+
+        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
+        jFrame1.getContentPane().setLayout(jFrame1Layout);
+        jFrame1Layout.setHorizontalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jFrame1Layout.setVerticalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(500, 550));
@@ -29,20 +42,22 @@ public class Menu extends javax.swing.JFrame {
         btnNuevoCliente.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnNuevoCliente.setText("Añadir cliente");
 
-        verClientes.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        verClientes.setText("Ver Clientes");
+        btnVerClientes.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnVerClientes.setText("Ver Clientes");
 
-        agendarCita.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        agendarCita.setText("Agendar Cita");
+        btnAgendarCita.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnAgendarCita.setText("Agendar Cita");
 
-        reportePagos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        reportePagos.setText("Reporte de pagos");
+        btnReportePagos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnReportePagos.setText("Reporte de pagos");
 
-        reporteCitas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        reporteCitas.setText("Reporte de citas");
+        btnReporteCitas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnReporteCitas.setText("Reporte de citas");
 
-        reporteCliente.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        reporteCliente.setText("Reporte de cliente");
+        btnReporteCliente.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnReporteCliente.setText("Reporte de cliente");
+
+        jLabel1.setText("Prueba");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -54,15 +69,18 @@ public class Menu extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(tituloVeterinaria, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnNuevoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(agendarCita, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(verClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(15, 160, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnNuevoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel1))
+                            .addComponent(btnAgendarCita, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnVerClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(15, 106, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(reporteCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(reporteCitas, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(reportePagos, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnReporteCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnReporteCitas, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnReportePagos, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -71,18 +89,20 @@ public class Menu extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(tituloVeterinaria, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnNuevoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnNuevoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(verClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnVerClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(agendarCita, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnAgendarCita, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(reportePagos, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnReportePagos, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(reporteCitas, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnReporteCitas, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(reporteCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addComponent(btnReporteCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(73, Short.MAX_VALUE))
         );
 
         btnNuevoCliente.getAccessibleContext().setAccessibleName("nuevoCliente");
@@ -100,12 +120,14 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton agendarCita;
+    private javax.swing.JButton btnAgendarCita;
     private javax.swing.JToggleButton btnNuevoCliente;
-    private javax.swing.JButton reporteCitas;
-    private javax.swing.JButton reporteCliente;
-    private javax.swing.JButton reportePagos;
+    private javax.swing.JButton btnReporteCitas;
+    private javax.swing.JButton btnReporteCliente;
+    private javax.swing.JButton btnReportePagos;
+    private javax.swing.JButton btnVerClientes;
+    private javax.swing.JFrame jFrame1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel tituloVeterinaria;
-    private javax.swing.JButton verClientes;
     // End of variables declaration//GEN-END:variables
 }
