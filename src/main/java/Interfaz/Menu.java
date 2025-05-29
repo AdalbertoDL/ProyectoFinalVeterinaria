@@ -10,8 +10,6 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jFrame1 = new javax.swing.JFrame();
-        jLabel1 = new javax.swing.JLabel();
         tituloVeterinaria = new javax.swing.JLabel();
         btnNuevoCliente = new javax.swing.JToggleButton();
         btnVerClientes = new javax.swing.JButton();
@@ -19,25 +17,6 @@ public class Menu extends javax.swing.JFrame {
         btnReportePagos = new javax.swing.JButton();
         btnReporteCitas = new javax.swing.JButton();
         btnReporteCliente = new javax.swing.JButton();
-
-        jLabel1.setText("Hola");
-
-        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
-        jFrame1.getContentPane().setLayout(jFrame1Layout);
-        jFrame1Layout.setHorizontalGroup(
-            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jFrame1Layout.createSequentialGroup()
-                .addGap(228, 228, 228)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(140, Short.MAX_VALUE))
-        );
-        jFrame1Layout.setVerticalGroup(
-            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jFrame1Layout.createSequentialGroup()
-                .addGap(109, 109, 109)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(229, Short.MAX_VALUE))
-        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(500, 550));
@@ -117,7 +96,7 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVerClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerClientesActionPerformed
-        jFrame1.setVisible(true);
+        
     }//GEN-LAST:event_btnVerClientesActionPerformed
 
     public static void main(String args[]) {
@@ -136,8 +115,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton btnReporteCliente;
     private javax.swing.JButton btnReportePagos;
     private javax.swing.JButton btnVerClientes;
-    private javax.swing.JFrame jFrame1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel tituloVeterinaria;
     // End of variables declaration//GEN-END:variables
 }
