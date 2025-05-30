@@ -12,7 +12,7 @@ public class Menu extends javax.swing.JFrame {
         pnlContenedor.setLayout(new CardLayout());
         pnlContenedor.add(pnlMenu, "menu");
         pnlContenedor.add(pnlNuevoCliente, "nuevoCliente");
-        
+        pnlContenedor.add(pnlAgendarCita, "AgendarCita");
     }
 
     @SuppressWarnings("unchecked")
@@ -80,6 +80,11 @@ public class Menu extends javax.swing.JFrame {
 
         btnAgendarCita1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnAgendarCita1.setText("Agendar Cita");
+        btnAgendarCita1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgendarCita1ActionPerformed(evt);
+            }
+        });
 
         btnReportePagos1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnReportePagos1.setText("Reporte de pagos");
@@ -208,8 +213,18 @@ public class Menu extends javax.swing.JFrame {
         lblMascota.setText("Nombre de la Mascota");
 
         btnAgendar.setText("Agendar");
+        btnAgendar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgendarActionPerformed(evt);
+            }
+        });
 
         btnCancelar.setText("Cancelar");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlAgendarCitaLayout = new javax.swing.GroupLayout(pnlAgendarCita);
         pnlAgendarCita.setLayout(pnlAgendarCitaLayout);
@@ -308,6 +323,21 @@ public class Menu extends javax.swing.JFrame {
         CardLayout cl = (CardLayout) pnlContenedor.getLayout();
         cl.show(pnlContenedor, "menu");
     }//GEN-LAST:event_btnAgregarClienteActionPerformed
+
+    private void btnAgendarCita1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgendarCita1ActionPerformed
+         CardLayout cl = (CardLayout) pnlContenedor.getLayout();
+        cl.show(pnlContenedor, "AgendarCita");
+    }//GEN-LAST:event_btnAgendarCita1ActionPerformed
+
+    private void btnAgendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgendarActionPerformed
+         CardLayout cl = (CardLayout) pnlContenedor.getLayout();
+        cl.show(pnlContenedor, "menu");
+    }//GEN-LAST:event_btnAgendarActionPerformed
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        CardLayout cl = (CardLayout) pnlContenedor.getLayout();
+        cl.show(pnlContenedor, "menu");
+    }//GEN-LAST:event_btnCancelarActionPerformed
 
     public static void main(String args[]) {
 
