@@ -64,6 +64,7 @@ public class Menu extends javax.swing.JFrame {
         btnRefrescar = new javax.swing.JButton();
         jListadoclientes = new javax.swing.JScrollPane();
         jtVerClientes = new javax.swing.JTable();
+        btnSalirListado = new javax.swing.JButton();
         pnlReporteDePago = new javax.swing.JPanel();
         jlbReporteDePago = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -356,6 +357,8 @@ public class Menu extends javax.swing.JFrame {
         ));
         jListadoclientes.setViewportView(jtVerClientes);
 
+        btnSalirListado.setText("Salir");
+
         javax.swing.GroupLayout pnlVerClientesLayout = new javax.swing.GroupLayout(pnlVerClientes);
         pnlVerClientes.setLayout(pnlVerClientesLayout);
         pnlVerClientesLayout.setHorizontalGroup(
@@ -367,16 +370,18 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(jlbVerClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(pnlVerClientesLayout.createSequentialGroup()
                         .addGap(38, 38, 38)
-                        .addGroup(pnlVerClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnRefrescar)
-                            .addGroup(pnlVerClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jListadoclientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(pnlVerClientesLayout.createSequentialGroup()
-                                    .addComponent(jlbBuscar)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(txtBuscarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnBuscarCliente))))))
+                        .addGroup(pnlVerClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(pnlVerClientesLayout.createSequentialGroup()
+                                .addComponent(btnSalirListado)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnRefrescar))
+                            .addComponent(jListadoclientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(pnlVerClientesLayout.createSequentialGroup()
+                                .addComponent(jlbBuscar)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtBuscarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnBuscarCliente)))))
                 .addContainerGap(43, Short.MAX_VALUE))
         );
         pnlVerClientesLayout.setVerticalGroup(
@@ -392,7 +397,9 @@ public class Menu extends javax.swing.JFrame {
                 .addGap(36, 36, 36)
                 .addComponent(jListadoclientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnRefrescar)
+                .addGroup(pnlVerClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnRefrescar)
+                    .addComponent(btnSalirListado))
                 .addContainerGap(121, Short.MAX_VALUE))
         );
 
@@ -542,6 +549,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton btnReporteCliente1;
     private javax.swing.JButton btnReportePagos1;
     private javax.swing.JButton btnSalir;
+    private javax.swing.JButton btnSalirListado;
     private javax.swing.JButton btnVerClientes1;
     private javax.swing.JComboBox<String> cbxHora;
     private javax.swing.JScrollPane jListadoclientes;
