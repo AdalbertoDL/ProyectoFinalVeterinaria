@@ -13,6 +13,7 @@ public class Menu extends javax.swing.JFrame {
         pnlContenedor.add(pnlMenu, "menu");
         pnlContenedor.add(pnlNuevoCliente, "nuevoCliente");
         pnlContenedor.add(pnlAgendarCita, "AgendarCita");
+        pnlContenedor.add(pnlVerClientes, "VerClientes");
     }
 
     @SuppressWarnings("unchecked")
@@ -53,16 +54,21 @@ public class Menu extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         lblMotivodeconsulta = new javax.swing.JLabel();
+        pnlVerClientes = new javax.swing.JPanel();
+        jlbVerClientes = new javax.swing.JLabel();
+        jlbBuscar = new javax.swing.JLabel();
+        txtBuscarCliente = new javax.swing.JTextField();
+        btnBuscarCliente = new javax.swing.JButton();
+        btnRefrescar = new javax.swing.JButton();
+        jListadoclientes = new javax.swing.JScrollPane();
+        jtVerClientes = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu Veterinaria");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setResizable(false);
 
-        pnlContenedor.setMaximumSize(new java.awt.Dimension(960, 565));
         pnlContenedor.setLayout(new java.awt.CardLayout());
-
-        pnlMenu.setPreferredSize(new java.awt.Dimension(960, 565));
 
         tituloVeterinaria1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         tituloVeterinaria1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -97,27 +103,17 @@ public class Menu extends javax.swing.JFrame {
 
         btnReporteCitas1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnReporteCitas1.setText("Reporte de citas");
-        btnReporteCitas1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnReporteCitas1ActionPerformed(evt);
-            }
-        });
 
         btnReporteCliente1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnReporteCliente1.setText("Reporte de cliente");
-        btnReporteCliente1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnReporteCliente1ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout pnlMenuLayout = new javax.swing.GroupLayout(pnlMenu);
         pnlMenu.setLayout(pnlMenuLayout);
         pnlMenuLayout.setHorizontalGroup(
             pnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlMenuLayout.createSequentialGroup()
-                .addContainerGap(560, Short.MAX_VALUE)
-                .addGroup(pnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+            .addGroup(pnlMenuLayout.createSequentialGroup()
+                .addGap(136, 136, 136)
+                .addGroup(pnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(tituloVeterinaria1, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnNuevoCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnVerClientes1, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -125,31 +121,29 @@ public class Menu extends javax.swing.JFrame {
                     .addComponent(btnReportePagos1, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnReporteCitas1, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnReporteCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(371, 371, 371))
+                .addContainerGap(193, Short.MAX_VALUE))
         );
         pnlMenuLayout.setVerticalGroup(
             pnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlMenuLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlMenuLayout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(tituloVeterinaria1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 170, Short.MAX_VALUE)
                 .addComponent(btnNuevoCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(12, 12, 12)
                 .addComponent(btnVerClientes1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnAgendarCita1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnReportePagos1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnReporteCitas1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnReporteCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addGap(31, 31, 31))
         );
 
-        pnlContenedor.add(pnlMenu, "cardMenu");
-
-        pnlNuevoCliente.setPreferredSize(new java.awt.Dimension(960, 565));
+        pnlContenedor.add(pnlMenu, "card2");
 
         lblTelefono.setText("Telefono");
 
@@ -159,7 +153,7 @@ public class Menu extends javax.swing.JFrame {
 
         lblDui.setText("DUI");
 
-        btnAgregarCliente.setFont(new java.awt.Font("sansserif", 0, 15)); // NOI18N
+        btnAgregarCliente.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         btnAgregarCliente.setText("Agregar");
         btnAgregarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -172,55 +166,49 @@ public class Menu extends javax.swing.JFrame {
         pnlNuevoClienteLayout.setHorizontalGroup(
             pnlNuevoClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlNuevoClienteLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addGroup(pnlNuevoClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlNuevoClienteLayout.createSequentialGroup()
-                        .addComponent(lblCorreo)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtCorreo))
-                    .addGroup(pnlNuevoClienteLayout.createSequentialGroup()
-                        .addComponent(lblNombre)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 247, Short.MAX_VALUE)
-                        .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlNuevoClienteLayout.createSequentialGroup()
-                        .addGroup(pnlNuevoClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(pnlNuevoClienteLayout.createSequentialGroup()
-                                .addComponent(lblTelefono)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(pnlNuevoClienteLayout.createSequentialGroup()
-                                .addComponent(lblDui)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtDui)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(342, 342, 342))
+                .addGap(42, 42, 42)
+                .addGroup(pnlNuevoClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblCorreo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblDui, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblNombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblTelefono, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnlNuevoClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtNombre)
+                    .addComponent(txtDui)
+                    .addComponent(txtTelefono)
+                    .addComponent(txtCorreo, javax.swing.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlNuevoClienteLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnAgregarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(67, 67, 67))
+                .addGap(31, 31, 31))
         );
-
-        pnlNuevoClienteLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {lblCorreo, lblDui, lblTelefono});
-
         pnlNuevoClienteLayout.setVerticalGroup(
             pnlNuevoClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlNuevoClienteLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
+                .addGap(55, 55, 55)
                 .addGroup(pnlNuevoClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblNombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblNombre)
                     .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlNuevoClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblDui)
+                    .addComponent(txtDui, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlNuevoClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblTelefono)
+                    .addComponent(txtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlNuevoClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblCorreo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblCorreo)
                     .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 375, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 456, Short.MAX_VALUE)
                 .addComponent(btnAgregarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48))
+                .addGap(28, 28, 28))
         );
 
-        pnlContenedor.add(pnlNuevoCliente, "cardNuevoCLiente");
-
-        pnlAgendarCita.setPreferredSize(new java.awt.Dimension(960, 565));
+        pnlContenedor.add(pnlNuevoCliente, "card2");
 
         lblAgendarCita.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblAgendarCita.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -236,7 +224,6 @@ public class Menu extends javax.swing.JFrame {
 
         lblMascota.setText("Nombre de la Mascota");
 
-        btnAgendar.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         btnAgendar.setText("Agendar");
         btnAgendar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -244,7 +231,6 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        btnCancelar.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         btnCancelar.setText("Cancelar");
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -262,67 +248,68 @@ public class Menu extends javax.swing.JFrame {
         pnlAgendarCita.setLayout(pnlAgendarCitaLayout);
         pnlAgendarCitaLayout.setHorizontalGroup(
             pnlAgendarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlAgendarCitaLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnCancelar)
+                .addGap(139, 139, 139))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlAgendarCitaLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnAgendar)
+                .addGap(26, 26, 26))
             .addGroup(pnlAgendarCitaLayout.createSequentialGroup()
-                .addGroup(pnlAgendarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlAgendarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(pnlAgendarCitaLayout.createSequentialGroup()
+                        .addGap(91, 91, 91)
                         .addGroup(pnlAgendarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblMotivodeconsulta)
                             .addGroup(pnlAgendarCitaLayout.createSequentialGroup()
-                                .addGap(91, 91, 91)
-                                .addGroup(pnlAgendarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblHora)
-                                    .addComponent(lblCliente)))
-                            .addGroup(pnlAgendarCitaLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(lblMascota)))
-                        .addGap(26, 26, 26)
-                        .addGroup(pnlAgendarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnlAgendarCitaLayout.createSequentialGroup()
+                                .addComponent(lblCalendario, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(43, 43, 43)
                                 .addGroup(pnlAgendarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cbxHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblAgendarCita, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jclCalendario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblAgendarCita, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(pnlAgendarCitaLayout.createSequentialGroup()
-                                .addGap(29, 29, 29)
-                                .addComponent(jclCalendario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(pnlAgendarCitaLayout.createSequentialGroup()
-                        .addGap(95, 95, 95)
-                        .addComponent(lblCalendario))
+                                .addGroup(pnlAgendarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblHora, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(pnlAgendarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cbxHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(pnlAgendarCitaLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(lblMascota)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(txtMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(117, Short.MAX_VALUE))
+                .addContainerGap(130, Short.MAX_VALUE))
         );
         pnlAgendarCitaLayout.setVerticalGroup(
             pnlAgendarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlAgendarCitaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblAgendarCita, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(pnlAgendarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlAgendarCitaLayout.createSequentialGroup()
-                        .addComponent(jclCalendario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(pnlAgendarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblHora)
-                            .addComponent(cbxHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(lblCliente))
+                    .addComponent(jclCalendario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblCalendario))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlAgendarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblCalendario)
+                .addGroup(pnlAgendarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblHora)
+                    .addComponent(cbxHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(9, 9, 9)
+                .addGroup(pnlAgendarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblCliente)
                     .addComponent(txtCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnlAgendarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblMascota)
-                    .addComponent(txtMascota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlAgendarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtMascota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblMascota))
+                .addGap(18, 18, 18)
                 .addComponent(lblMotivodeconsulta)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 137, Short.MAX_VALUE)
                 .addGroup(pnlAgendarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAgendar)
                     .addComponent(btnCancelar))
@@ -330,6 +317,75 @@ public class Menu extends javax.swing.JFrame {
         );
 
         pnlContenedor.add(pnlAgendarCita, "card4");
+
+        pnlVerClientes.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        jlbVerClientes.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jlbVerClientes.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jlbVerClientes.setText("Ver Clientes");
+        jlbVerClientes.setToolTipText("");
+        jlbVerClientes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jlbBuscar.setText("Buscar:");
+
+        btnBuscarCliente.setText("Buscar");
+
+        btnRefrescar.setText("Refrescar");
+
+        jtVerClientes.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Nombre", "DUI", "Telefono", "Correo electronico"
+            }
+        ));
+        jListadoclientes.setViewportView(jtVerClientes);
+
+        javax.swing.GroupLayout pnlVerClientesLayout = new javax.swing.GroupLayout(pnlVerClientes);
+        pnlVerClientes.setLayout(pnlVerClientesLayout);
+        pnlVerClientesLayout.setHorizontalGroup(
+            pnlVerClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlVerClientesLayout.createSequentialGroup()
+                .addGroup(pnlVerClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlVerClientesLayout.createSequentialGroup()
+                        .addGap(199, 199, 199)
+                        .addComponent(jlbVerClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlVerClientesLayout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addGroup(pnlVerClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnRefrescar)
+                            .addGroup(pnlVerClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jListadoclientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(pnlVerClientesLayout.createSequentialGroup()
+                                    .addComponent(jlbBuscar)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(txtBuscarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnBuscarCliente))))))
+                .addContainerGap(43, Short.MAX_VALUE))
+        );
+        pnlVerClientesLayout.setVerticalGroup(
+            pnlVerClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlVerClientesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jlbVerClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addGroup(pnlVerClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlbBuscar)
+                    .addComponent(txtBuscarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBuscarCliente))
+                .addGap(36, 36, 36)
+                .addComponent(jListadoclientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnRefrescar)
+                .addContainerGap(96, Short.MAX_VALUE))
+        );
+
+        pnlContenedor.add(pnlVerClientes, "card5");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -367,12 +423,12 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAgregarClienteActionPerformed
 
     private void btnAgendarCita1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgendarCita1ActionPerformed
-        CardLayout cl = (CardLayout) pnlContenedor.getLayout();
-        cl.show(pnlContenedor, "agendarCita");
+         CardLayout cl = (CardLayout) pnlContenedor.getLayout();
+        cl.show(pnlContenedor, "AgendarCita");
     }//GEN-LAST:event_btnAgendarCita1ActionPerformed
 
     private void btnAgendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgendarActionPerformed
-        CardLayout cl = (CardLayout) pnlContenedor.getLayout();
+         CardLayout cl = (CardLayout) pnlContenedor.getLayout();
         cl.show(pnlContenedor, "menu");
     }//GEN-LAST:event_btnAgendarActionPerformed
 
@@ -380,26 +436,6 @@ public class Menu extends javax.swing.JFrame {
         CardLayout cl = (CardLayout) pnlContenedor.getLayout();
         cl.show(pnlContenedor, "menu");
     }//GEN-LAST:event_btnCancelarActionPerformed
-
-    private void btnVolverReporteCitasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverReporteCitasActionPerformed
-        CardLayout cl = (CardLayout) pnlContenedor.getLayout();
-        cl.show(pnlContenedor, "menu");
-    }//GEN-LAST:event_btnVolverReporteCitasActionPerformed
-
-    private void btnReporteCitas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporteCitas1ActionPerformed
-        CardLayout cl = (CardLayout) pnlContenedor.getLayout();
-        cl.show(pnlContenedor, "reporteCitas");
-    }//GEN-LAST:event_btnReporteCitas1ActionPerformed
-
-    private void btnReporteCliente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporteCliente1ActionPerformed
-        CardLayout cl = (CardLayout) pnlContenedor.getLayout();
-        cl.show(pnlContenedor, "reporteCliente");
-    }//GEN-LAST:event_btnReporteCliente1ActionPerformed
-
-    private void btnCancelarReporteClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarReporteClienteActionPerformed
-        CardLayout cl = (CardLayout) pnlContenedor.getLayout();
-        cl.show(pnlContenedor, "menu");
-    }//GEN-LAST:event_btnCancelarReporteClienteActionPerformed
 
     public static void main(String args[]) {
 
@@ -414,27 +450,23 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton btnAgendar;
     private javax.swing.JButton btnAgendarCita1;
     private javax.swing.JButton btnAgregarCliente;
+    private javax.swing.JButton btnBuscarCliente;
     private javax.swing.JButton btnCancelar;
-    private javax.swing.JButton btnCancelarReporteCliente;
     private javax.swing.JToggleButton btnNuevoCliente1;
     private javax.swing.JButton btnRefrescar;
     private javax.swing.JButton btnReporteCitas1;
     private javax.swing.JButton btnReporteCliente1;
     private javax.swing.JButton btnReportePagos1;
     private javax.swing.JButton btnVerClientes1;
-    private javax.swing.JButton btnVolverReporteCitas;
     private javax.swing.JComboBox<String> cbxHora;
+    private javax.swing.JScrollPane jListadoclientes;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextArea jTextArea1;
     private com.toedter.calendar.JCalendar jclCalendario;
     private javax.swing.JLabel jlbBuscar;
     private javax.swing.JLabel jlbVerClientes;
     private javax.swing.JTable jtVerClientes;
     private javax.swing.JLabel lblAgendarCita;
-    private javax.swing.JLabel lblBuscadorReporteCliente;
-    private javax.swing.JLabel lblBuscarPor;
     private javax.swing.JLabel lblCalendario;
     private javax.swing.JLabel lblCliente;
     private javax.swing.JLabel lblCorreo;
@@ -443,21 +475,20 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JLabel lblMascota;
     private javax.swing.JLabel lblMotivodeconsulta;
     private javax.swing.JLabel lblNombre;
-    private javax.swing.JLabel lblReporteCliente;
     private javax.swing.JLabel lblTelefono;
-    private javax.swing.JLabel lblTituloCita;
     private javax.swing.JPanel pnlAgendarCita;
     private javax.swing.JPanel pnlContenedor;
     private javax.swing.JPanel pnlMenu;
     private javax.swing.JPanel pnlNuevoCliente;
+    private javax.swing.JPanel pnlVerClientes;
     private javax.swing.JLabel tituloVeterinaria1;
+    private javax.swing.JTextField txtBuscarCliente;
     private javax.swing.JTextField txtCliente;
     private javax.swing.JTextField txtCorreo;
     private javax.swing.JTextField txtDui;
     private javax.swing.JTextField txtMascota;
     private javax.swing.JTextField txtNombre;
     private javax.swing.JTextField txtTelefono;
-    private javax.swing.JTextArea txtaReporteCliente;
     // End of variables declaration//GEN-END:variables
 
 }
