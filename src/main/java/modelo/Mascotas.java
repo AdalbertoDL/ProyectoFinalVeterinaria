@@ -17,7 +17,7 @@ public class Mascotas {
     private String especie;
     private String raza;
     private int edad;
-    private ArrayList<HistorialMed> historialMed; //Historial medico
+    //private ArrayList<HistorialMed> historialMed; //Historial medico
     private ArrayList<Citas> citas; // Crear lista de citas
     
     //Constructor
@@ -27,7 +27,7 @@ public class Mascotas {
     this.especie = especie;
     this.raza = raza;
     this.edad = edad;
-    this.historialMed = new ArrayList<>();
+    //this.historialMed = new ArrayList<>();
     this.citas = new ArrayList<>();
      
     }
@@ -58,7 +58,7 @@ public class Mascotas {
         } else{
             System.out.println("Citas agendadas:");
             for (Citas c : citas){
-                System.out.println("-" + c.getDetalles()); 
+                //System.out.println("-" + c.getDetalles()); 
             
             }
         
