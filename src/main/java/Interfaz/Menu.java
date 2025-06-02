@@ -13,6 +13,7 @@ public class Menu extends javax.swing.JFrame {
         pnlContenedor.add(pnlMenu, "menu");
         pnlContenedor.add(pnlNuevoCliente, "nuevoCliente");
         pnlContenedor.add(pnlAgendarCita, "AgendarCita");
+        pnlContenedor.add(pnlVerClientes, "VerClientes");
     }
 
     @SuppressWarnings("unchecked")
@@ -53,6 +54,14 @@ public class Menu extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         lblMotivodeconsulta = new javax.swing.JLabel();
+        pnlVerClientes = new javax.swing.JPanel();
+        jlbVerClientes = new javax.swing.JLabel();
+        jlbBuscar = new javax.swing.JLabel();
+        txtBuscarCliente = new javax.swing.JTextField();
+        btnBuscarCliente = new javax.swing.JButton();
+        btnRefrescar = new javax.swing.JButton();
+        jListadoclientes = new javax.swing.JScrollPane();
+        jtVerClientes = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu Veterinaria");
@@ -119,7 +128,7 @@ public class Menu extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlMenuLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(tituloVeterinaria1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 170, Short.MAX_VALUE)
                 .addComponent(btnNuevoCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
                 .addComponent(btnVerClientes1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -194,7 +203,7 @@ public class Menu extends javax.swing.JFrame {
                 .addGroup(pnlNuevoClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblCorreo)
                     .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 375, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 456, Short.MAX_VALUE)
                 .addComponent(btnAgregarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28))
         );
@@ -273,7 +282,7 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(lblMascota)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(txtMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(117, Short.MAX_VALUE))
+                .addContainerGap(130, Short.MAX_VALUE))
         );
         pnlAgendarCitaLayout.setVerticalGroup(
             pnlAgendarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -300,7 +309,7 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(lblMotivodeconsulta)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 137, Short.MAX_VALUE)
                 .addGroup(pnlAgendarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAgendar)
                     .addComponent(btnCancelar))
@@ -308,6 +317,75 @@ public class Menu extends javax.swing.JFrame {
         );
 
         pnlContenedor.add(pnlAgendarCita, "card4");
+
+        pnlVerClientes.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        jlbVerClientes.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jlbVerClientes.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jlbVerClientes.setText("Ver Clientes");
+        jlbVerClientes.setToolTipText("");
+        jlbVerClientes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jlbBuscar.setText("Buscar:");
+
+        btnBuscarCliente.setText("Buscar");
+
+        btnRefrescar.setText("Refrescar");
+
+        jtVerClientes.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Nombre", "DUI", "Telefono", "Correo electronico"
+            }
+        ));
+        jListadoclientes.setViewportView(jtVerClientes);
+
+        javax.swing.GroupLayout pnlVerClientesLayout = new javax.swing.GroupLayout(pnlVerClientes);
+        pnlVerClientes.setLayout(pnlVerClientesLayout);
+        pnlVerClientesLayout.setHorizontalGroup(
+            pnlVerClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlVerClientesLayout.createSequentialGroup()
+                .addGroup(pnlVerClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlVerClientesLayout.createSequentialGroup()
+                        .addGap(199, 199, 199)
+                        .addComponent(jlbVerClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlVerClientesLayout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addGroup(pnlVerClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnRefrescar)
+                            .addGroup(pnlVerClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jListadoclientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(pnlVerClientesLayout.createSequentialGroup()
+                                    .addComponent(jlbBuscar)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(txtBuscarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnBuscarCliente))))))
+                .addContainerGap(43, Short.MAX_VALUE))
+        );
+        pnlVerClientesLayout.setVerticalGroup(
+            pnlVerClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlVerClientesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jlbVerClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addGroup(pnlVerClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlbBuscar)
+                    .addComponent(txtBuscarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBuscarCliente))
+                .addGap(36, 36, 36)
+                .addComponent(jListadoclientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnRefrescar)
+                .addContainerGap(96, Short.MAX_VALUE))
+        );
+
+        pnlContenedor.add(pnlVerClientes, "card5");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -333,9 +411,10 @@ public class Menu extends javax.swing.JFrame {
         CardLayout cl = (CardLayout) pnlContenedor.getLayout();
         cl.show(pnlContenedor, "nuevoCliente");
     }//GEN-LAST:event_btnNuevoCliente1ActionPerformed
-
+        
     private void btnVerClientes1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerClientes1ActionPerformed
-        // TODO add your handling code here:
+        CardLayout cl = (CardLayout) pnlContenedor.getLayout();
+        cl.show(pnlContenedor, "VerClientes");
     }//GEN-LAST:event_btnVerClientes1ActionPerformed
 
     private void btnAgregarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarClienteActionPerformed
@@ -371,16 +450,22 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton btnAgendar;
     private javax.swing.JButton btnAgendarCita1;
     private javax.swing.JButton btnAgregarCliente;
+    private javax.swing.JButton btnBuscarCliente;
     private javax.swing.JButton btnCancelar;
     private javax.swing.JToggleButton btnNuevoCliente1;
+    private javax.swing.JButton btnRefrescar;
     private javax.swing.JButton btnReporteCitas1;
     private javax.swing.JButton btnReporteCliente1;
     private javax.swing.JButton btnReportePagos1;
     private javax.swing.JButton btnVerClientes1;
     private javax.swing.JComboBox<String> cbxHora;
+    private javax.swing.JScrollPane jListadoclientes;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private com.toedter.calendar.JCalendar jclCalendario;
+    private javax.swing.JLabel jlbBuscar;
+    private javax.swing.JLabel jlbVerClientes;
+    private javax.swing.JTable jtVerClientes;
     private javax.swing.JLabel lblAgendarCita;
     private javax.swing.JLabel lblCalendario;
     private javax.swing.JLabel lblCliente;
@@ -395,7 +480,9 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JPanel pnlContenedor;
     private javax.swing.JPanel pnlMenu;
     private javax.swing.JPanel pnlNuevoCliente;
+    private javax.swing.JPanel pnlVerClientes;
     private javax.swing.JLabel tituloVeterinaria1;
+    private javax.swing.JTextField txtBuscarCliente;
     private javax.swing.JTextField txtCliente;
     private javax.swing.JTextField txtCorreo;
     private javax.swing.JTextField txtDui;
