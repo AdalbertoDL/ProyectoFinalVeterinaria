@@ -54,7 +54,7 @@ public class Menu extends javax.swing.JFrame {
         btnAgendar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txtaMotivoConsulta = new javax.swing.JTextArea();
         lblMotivodeconsulta = new javax.swing.JLabel();
         pnlVerClientes = new javax.swing.JPanel();
         jlbVerClientes = new javax.swing.JLabel();
@@ -63,17 +63,31 @@ public class Menu extends javax.swing.JFrame {
         btnBuscarCliente = new javax.swing.JButton();
         btnRefrescar = new javax.swing.JButton();
         jListadoclientes = new javax.swing.JScrollPane();
-        jtVerClientes = new javax.swing.JTable();
+        tblVerClientes = new javax.swing.JTable();
         btnSalirListado = new javax.swing.JButton();
         pnlReporteDePago = new javax.swing.JPanel();
         jlbReporteDePago = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        tlbTablaDeReporteDeReporte = new javax.swing.JTable();
+        tblTablaDeReporteDeReporte = new javax.swing.JTable();
         jlbBuscarReporteDePago = new javax.swing.JLabel();
         txtNombreReporteDePago = new javax.swing.JTextField();
         btnBuscarReporteDePago = new javax.swing.JButton();
         btnActualizar = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
+        pnlReporteCitas = new javax.swing.JPanel();
+        lblReporteCitas = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        tblReporteCitas = new javax.swing.JTable();
+        btnVolverReporteCitas = new javax.swing.JButton();
+        pnlReporteCliente = new javax.swing.JPanel();
+        lblReporteCliente = new javax.swing.JLabel();
+        lblBuscarPor = new javax.swing.JLabel();
+        cmbBuscarPor = new javax.swing.JComboBox<>();
+        txtBuscarReporteCliente = new javax.swing.JTextField();
+        btnBuscarReporteCliente = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        txtaReporteCliente = new javax.swing.JTextArea();
+        btnVolverReporteCliente = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu Veterinaria");
@@ -256,9 +270,9 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        txtaMotivoConsulta.setColumns(20);
+        txtaMotivoConsulta.setRows(5);
+        jScrollPane1.setViewportView(txtaMotivoConsulta);
 
         lblMotivodeconsulta.setText("Motivo de consulta");
 
@@ -327,7 +341,7 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(lblMotivodeconsulta)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 162, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addGroup(pnlAgendarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAgendar)
                     .addComponent(btnCancelar))
@@ -351,7 +365,7 @@ public class Menu extends javax.swing.JFrame {
 
         btnRefrescar.setText("Refrescar");
 
-        jtVerClientes.setModel(new javax.swing.table.DefaultTableModel(
+        tblVerClientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -362,7 +376,7 @@ public class Menu extends javax.swing.JFrame {
                 "Nombre", "DUI", "Telefono", "Correo electronico"
             }
         ));
-        jListadoclientes.setViewportView(jtVerClientes);
+        jListadoclientes.setViewportView(tblVerClientes);
 
         btnSalirListado.setText("Salir");
 
@@ -407,7 +421,7 @@ public class Menu extends javax.swing.JFrame {
                 .addGroup(pnlVerClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRefrescar)
                     .addComponent(btnSalirListado))
-                .addContainerGap(121, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pnlContenedor.add(pnlVerClientes, "card5");
@@ -417,7 +431,7 @@ public class Menu extends javax.swing.JFrame {
         jlbReporteDePago.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlbReporteDePago.setText("Reporte de Pagos");
 
-        tlbTablaDeReporteDeReporte.setModel(new javax.swing.table.DefaultTableModel(
+        tblTablaDeReporteDeReporte.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -428,7 +442,7 @@ public class Menu extends javax.swing.JFrame {
                 "ID", "Cliente", "Mascota", "Monto "
             }
         ));
-        jScrollPane2.setViewportView(tlbTablaDeReporteDeReporte);
+        jScrollPane2.setViewportView(tblTablaDeReporteDeReporte);
 
         jlbBuscarReporteDePago.setText("Buscar");
 
@@ -480,10 +494,131 @@ public class Menu extends javax.swing.JFrame {
                 .addGroup(pnlReporteDePagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnActualizar)
                     .addComponent(btnSalir))
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pnlContenedor.add(pnlReporteDePago, "card6");
+
+        pnlReporteCitas.setPreferredSize(new java.awt.Dimension(960, 565));
+
+        lblReporteCitas.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblReporteCitas.setText("Reporte de citas");
+
+        tblReporteCitas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Fecha", "Hora", "Veterinario", "Mascota", "Dueño", "Estado"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane3.setViewportView(tblReporteCitas);
+
+        btnVolverReporteCitas.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
+        btnVolverReporteCitas.setText("Volver");
+
+        javax.swing.GroupLayout pnlReporteCitasLayout = new javax.swing.GroupLayout(pnlReporteCitas);
+        pnlReporteCitas.setLayout(pnlReporteCitasLayout);
+        pnlReporteCitasLayout.setHorizontalGroup(
+            pnlReporteCitasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlReporteCitasLayout.createSequentialGroup()
+                .addGroup(pnlReporteCitasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnVolverReporteCitas)
+                    .addGroup(pnlReporteCitasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(pnlReporteCitasLayout.createSequentialGroup()
+                            .addGap(398, 398, 398)
+                            .addComponent(lblReporteCitas))
+                        .addGroup(pnlReporteCitasLayout.createSequentialGroup()
+                            .addGap(39, 39, 39)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 867, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        pnlReporteCitasLayout.setVerticalGroup(
+            pnlReporteCitasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlReporteCitasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblReporteCitas)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnVolverReporteCitas)
+                .addContainerGap(36, Short.MAX_VALUE))
+        );
+
+        pnlContenedor.add(pnlReporteCitas, "card7");
+
+        pnlReporteCliente.setPreferredSize(new java.awt.Dimension(960, 565));
+
+        lblReporteCliente.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblReporteCliente.setText("Reporte de Cliente");
+
+        lblBuscarPor.setText("Buscar por:");
+
+        cmbBuscarPor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nombre cliente", "Nombre Mascota" }));
+
+        btnBuscarReporteCliente.setText("🔍");
+
+        txtaReporteCliente.setColumns(20);
+        txtaReporteCliente.setRows(5);
+        jScrollPane4.setViewportView(txtaReporteCliente);
+
+        btnVolverReporteCliente.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
+        btnVolverReporteCliente.setText("Volver");
+
+        javax.swing.GroupLayout pnlReporteClienteLayout = new javax.swing.GroupLayout(pnlReporteCliente);
+        pnlReporteCliente.setLayout(pnlReporteClienteLayout);
+        pnlReporteClienteLayout.setHorizontalGroup(
+            pnlReporteClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlReporteClienteLayout.createSequentialGroup()
+                .addGroup(pnlReporteClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlReporteClienteLayout.createSequentialGroup()
+                        .addGap(355, 355, 355)
+                        .addComponent(lblReporteCliente))
+                    .addGroup(pnlReporteClienteLayout.createSequentialGroup()
+                        .addGap(46, 46, 46)
+                        .addGroup(pnlReporteClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnVolverReporteCliente)
+                            .addGroup(pnlReporteClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(pnlReporteClienteLayout.createSequentialGroup()
+                                    .addComponent(txtBuscarReporteCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(btnBuscarReporteCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(pnlReporteClienteLayout.createSequentialGroup()
+                                    .addComponent(lblBuscarPor)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(cmbBuscarPor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 862, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(52, Short.MAX_VALUE))
+        );
+        pnlReporteClienteLayout.setVerticalGroup(
+            pnlReporteClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlReporteClienteLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblReporteCliente)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlReporteClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblBuscarPor)
+                    .addComponent(cmbBuscarPor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(pnlReporteClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtBuscarReporteCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBuscarReporteCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(41, 41, 41)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnVolverReporteCliente)
+                .addContainerGap(33, Short.MAX_VALUE))
+        );
+
+        pnlContenedor.add(pnlReporteCliente, "card8");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -549,6 +684,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton btnAgendarCita1;
     private javax.swing.JButton btnAgregarCliente;
     private javax.swing.JButton btnBuscarCliente;
+    private javax.swing.JButton btnBuscarReporteCliente;
     private javax.swing.JButton btnBuscarReporteDePago;
     private javax.swing.JButton btnCancelar;
     private javax.swing.JToggleButton btnNuevoCliente1;
@@ -559,18 +695,22 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton btnSalir;
     private javax.swing.JButton btnSalirListado;
     private javax.swing.JButton btnVerClientes1;
+    private javax.swing.JButton btnVolverReporteCitas;
+    private javax.swing.JButton btnVolverReporteCliente;
     private javax.swing.JComboBox<String> cbxHora;
+    private javax.swing.JComboBox<String> cmbBuscarPor;
     private javax.swing.JScrollPane jListadoclientes;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private com.toedter.calendar.JCalendar jclCalendario;
     private javax.swing.JLabel jlbBuscar;
     private javax.swing.JLabel jlbBuscarReporteDePago;
     private javax.swing.JLabel jlbReporteDePago;
     private javax.swing.JLabel jlbVerClientes;
-    private javax.swing.JTable jtVerClientes;
     private javax.swing.JLabel lblAgendarCita;
+    private javax.swing.JLabel lblBuscarPor;
     private javax.swing.JLabel lblCalendario;
     private javax.swing.JLabel lblCliente;
     private javax.swing.JLabel lblCorreo;
@@ -579,16 +719,23 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JLabel lblMascota;
     private javax.swing.JLabel lblMotivodeconsulta;
     private javax.swing.JLabel lblNombre;
+    private javax.swing.JLabel lblReporteCitas;
+    private javax.swing.JLabel lblReporteCliente;
     private javax.swing.JLabel lblTelefono;
     private javax.swing.JPanel pnlAgendarCita;
     private javax.swing.JPanel pnlContenedor;
     private javax.swing.JPanel pnlMenu;
     private javax.swing.JPanel pnlNuevoCliente;
+    private javax.swing.JPanel pnlReporteCitas;
+    private javax.swing.JPanel pnlReporteCliente;
     private javax.swing.JPanel pnlReporteDePago;
     private javax.swing.JPanel pnlVerClientes;
+    private javax.swing.JTable tblReporteCitas;
+    private javax.swing.JTable tblTablaDeReporteDeReporte;
+    private javax.swing.JTable tblVerClientes;
     private javax.swing.JLabel tituloVeterinaria1;
-    private javax.swing.JTable tlbTablaDeReporteDeReporte;
     private javax.swing.JTextField txtBuscarCliente;
+    private javax.swing.JTextField txtBuscarReporteCliente;
     private javax.swing.JTextField txtCliente;
     private javax.swing.JTextField txtCorreo;
     private javax.swing.JTextField txtDui;
@@ -596,6 +743,8 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JTextField txtNombre;
     private javax.swing.JTextField txtNombreReporteDePago;
     private javax.swing.JTextField txtTelefono;
+    private javax.swing.JTextArea txtaMotivoConsulta;
+    private javax.swing.JTextArea txtaReporteCliente;
     // End of variables declaration//GEN-END:variables
 
 }
